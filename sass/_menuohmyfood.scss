@@ -55,13 +55,15 @@ header {
 }
 
 .imageAndBorderRadiusRestaurant {
-    height: 657px;
+    position: relative;
     .dessusDeTitreRestaurant {
-        position: relative;
+        position: absolute;
+        z-index: 8;
         height: 100px;
-        bottom: 100px;
-        border-radius: 100px 100px 0px 0px;
+        width: 100%;
         background-color: #F6F6F6;
+        border-radius: 50px 50px 0px 0px;
+        bottom: 0px;
     }
 }
 
@@ -337,14 +339,16 @@ footer {
             font-weight: 400;
             margin-bottom: 0px;
         }
+
+        a {
+            color: #FFF;
+            font-family: 'roboto',sans-serif;
+            font-size: 45px;
+            font-weight: 400;
+            margin-top: 45px;
+        }
     }
 
-    a {
-        color: #FFF;
-        font-family: 'roboto',sans-serif;
-        font-size: 45px;
-        font-weight: 400;
-    }
 }
 
 @keyframes delayCard {
@@ -367,4 +371,60 @@ footer {
     to{
         opacity: 1;
     }
+}
+
+@media screen and (min-width: 768px) {
+
+    header .logo {
+        .icontitle {
+            width: 40%;
+            .fa-arrow-left-long {
+                font-size: 50px;
+            }
+        }
+        .logotitle {
+                width: 60%;
+            img {
+                width: 200px;
+                height: 60px;
+            }
+            
+        }
+    }
+
+    .imageAndBorderRadiusRestaurant {
+        margin: 0 50px;
+        img {
+            border-radius: 50px;
+        }
+        .dessusDeTitreRestaurant {
+            display: none;
+        }
+    }
+
+    .menurestaurant {
+        background-color: #FFFFFF;
+        h2 {
+            width: 100%;
+        }
+        .titlerestaurantstar {
+            margin-top: 50px;
+            background-color: #F6F6F6;
+            border-radius: 20px;
+        }
+        .restauranttitle {
+            justify-content: space-around;
+            h1 {
+                font-size: 40px;
+            }
+        }
+        .cartesmenus {
+            background-color: #F6F6F6;
+        }
+    }
+    
+}
+
+@media screen and (min-width: 992px) {
+
 }

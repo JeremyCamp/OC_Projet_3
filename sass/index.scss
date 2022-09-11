@@ -23,6 +23,11 @@ body {
     margin: 0;
 }
 
+img {
+    height: 100%;
+    width: 100%;
+}
+
 .loadingPage {
     position: absolute;
     height: 6270px;
@@ -158,7 +163,7 @@ header {
         display: flex;
         align-items: center;
         height: 40px;
-        width: 35%;
+        width: 300px;
         border: none;
         background-color: #eaeaea;
         padding: 0px;
@@ -170,7 +175,7 @@ header {
     }
 
     ::placeholder {
-        font-family: Roboto;
+        font-family: 'Roboto';
         font-size: 35px;
         font-style: 500;
         color: black;
@@ -198,9 +203,10 @@ header {
     }
 
     button {
-        height: 120px;
+        height: 130px;
         width: 50%;
         margin: 60px 25% 120px 25%;
+        padding: auto;
         border-radius: 60px;
         border: none;
         color: #FFF;
@@ -211,7 +217,6 @@ header {
 
 .fonctionnement {
     margin: 100px 6% 180px 6%;
-
     h1{
         font-family: Roboto;
         font-weight: 400;
@@ -273,6 +278,13 @@ header {
     flex-direction: column;
     height: 3105px;
     justify-content: space-between;
+
+    .allcards {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
 
     .cardAndIcons {
         position: relative;
@@ -409,7 +421,12 @@ footer {
             font-size: 45px;
             font-weight: 400;
             margin-bottom: 0px;
+            margin-top: 45px;
             color: #FFF;
+        }
+
+        .contact {
+            margin-top: 45px;
         }
     }
 }
@@ -509,5 +526,178 @@ footer {
     }
     to{
         color: #000;
+    }
+}
+
+
+@media only screen and (min-width: 900px) {
+
+    body {
+        background-color: red;
+    }
+    .loadingPage {
+        height: 2509px;
+    }
+    header .title {
+        justify-content: flex-start;
+        img {
+            margin-left: 6%;
+            width: 200px;
+            height: 50px;
+        }
+    }
+
+    .localisation {
+        width: 380px;
+        height: 60px;
+        justify-content: flex-start;
+        margin-left: 6%;
+        margin-top: 50px;
+        background-color: #FFF;
+        border: solid 3px #F6F6F6;
+        border-left: none;
+        border-radius: 20px 20px 20px 20px;
+        span {
+            justify-content: center;
+            align-items: center;
+            width: 15%;
+            height: 62px;
+            padding-left: 5px;
+            background-color: #F6F6F6;
+            color: #000000;
+            border-radius: 20px 0px 0px 20px;
+            i {
+                font-size: 30px;
+            }
+        }
+        input {
+            width: 75%;
+            padding-left: 6%;
+            background-color: #FFFFFF;
+            font-size: 20px;
+        }
+        ::placeholder {
+            font-size: 26px;
+        }
+        
+    }
+
+    .slogan {
+        margin-top: 70px;
+        background-color: #FFFFFF;
+        margin-left: 6%;
+        h1 {
+            margin: 0;
+            padding-top: 0;
+            font-size: 40px;
+            text-align: left;
+        }
+        h2 {
+            margin: 20px 0 0 0;
+            font-size: 25px;
+            text-align: left;
+        }
+        button {
+            margin-bottom: 60px;
+            height: 90px;
+            font-size: 25px;
+            font-family: 'Roboto';
+        }
+    }
+
+    .fonctionnement {
+        margin: 0 6% 0 6%;
+        .allcardsfonctionnement {
+            display: flex;
+            justify-content: space-between;
+        }
+        h1{
+            font-size: 40px;
+            margin: 0;
+            margin-bottom: 30px;
+        }
+        .rondvioletnombre {
+            display: none;
+        }
+        .cartefonctionnement {
+            flex-direction: column;
+            height: 250px;
+            width: 30%;
+            box-shadow: #f6f6f6 5px 5px 5px;
+            background-color: #FFFFFF;
+            margin-bottom: 0;
+            .icone {
+                width: 100%;
+                height: 35%;
+                background-color: #F6F6F6;
+                border-radius: 40px 40px 0px 0px;
+            }
+            p {
+                text-align: center;
+                font-size: 30px;
+            }
+        }
+    }
+    
+    .restaurants {
+        height: 1020px;
+        padding: 0;
+        background-color: #FFFFFF;
+        justify-content: space-between;
+        h1{
+            margin: 50px 6%;
+            font-size: 40px;
+        }
+
+        .allcards {
+            flex-direction: row;
+            margin: 0 6%;
+            flex-wrap: wrap;
+        }
+        .cardAndIcons {
+            width: 47%;
+            height: 375px;
+            box-shadow: #F6F6F6 5px 5px 5px;
+            border-radius: 40px;
+            .nouveaucarte {
+                top: 15px;
+                left: 72%;
+                height: 45px;
+                width: 90px;
+                font-size: 20px;
+                border-radius: 15px;
+            }
+        }
+        .iconacceuil {
+            top: 290px;
+            .fa-heart {
+                font-size: 50px;
+            }
+        }
+    
+    }
+
+    .carteacceuil {
+        width: 45%;
+        .photocarteacceuil {
+            height: 65%;
+        }
+        .basdecarte {
+            height: 35%;
+            .infocarteacceuil {
+                height: 100px;
+                width: 100%;
+                h2 {
+                    height: 50%;
+                    font-size: 30px;
+                    margin: 0;
+                }
+                h3 {
+                    height: 50%;
+                    font-size: 25px;
+                    margin: 0;
+                }
+            }
+        }
     }
 }

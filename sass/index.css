@@ -51,14 +51,16 @@ header .logo .logotitle img {
 }
 
 .imageAndBorderRadiusRestaurant {
-  height: 657px;
+  position: relative;
 }
 .imageAndBorderRadiusRestaurant .dessusDeTitreRestaurant {
-  position: relative;
+  position: absolute;
+  z-index: 8;
   height: 100px;
-  bottom: 100px;
-  border-radius: 100px 100px 0px 0px;
+  width: 100%;
   background-color: #F6F6F6;
+  border-radius: 50px 50px 0px 0px;
+  bottom: 0px;
 }
 
 .menurestaurant {
@@ -340,11 +342,12 @@ footer .infofooter p {
   font-weight: 400;
   margin-bottom: 0px;
 }
-footer a {
+footer .infofooter a {
   color: #FFF;
   font-family: "roboto", sans-serif;
   font-size: 45px;
   font-weight: 400;
+  margin-top: 45px;
 }
 
 @-webkit-keyframes delayCard {
@@ -388,6 +391,50 @@ footer a {
     opacity: 1;
   }
 }
+@media screen and (min-width: 768px) {
+  header .logo .icontitle {
+    width: 40%;
+  }
+  header .logo .icontitle .fa-arrow-left-long {
+    font-size: 50px;
+  }
+  header .logo .logotitle {
+    width: 60%;
+  }
+  header .logo .logotitle img {
+    width: 200px;
+    height: 60px;
+  }
+  .imageAndBorderRadiusRestaurant {
+    margin: 0 50px;
+  }
+  .imageAndBorderRadiusRestaurant img {
+    border-radius: 50px;
+  }
+  .imageAndBorderRadiusRestaurant .dessusDeTitreRestaurant {
+    display: none;
+  }
+  .menurestaurant {
+    background-color: #FFFFFF;
+  }
+  .menurestaurant h2 {
+    width: 100%;
+  }
+  .menurestaurant .titlerestaurantstar {
+    margin-top: 50px;
+    background-color: #F6F6F6;
+    border-radius: 20px;
+  }
+  .menurestaurant .restauranttitle {
+    justify-content: space-around;
+  }
+  .menurestaurant .restauranttitle h1 {
+    font-size: 40px;
+  }
+  .menurestaurant .cartesmenus {
+    background-color: #F6F6F6;
+  }
+}
 * {
   margin-left: 0px;
   margin-right: 0px;
@@ -400,6 +447,11 @@ a {
 
 body {
   margin: 0;
+}
+
+img {
+  height: 100%;
+  width: 100%;
 }
 
 .loadingPage {
@@ -568,7 +620,7 @@ header img {
   display: flex;
   align-items: center;
   height: 40px;
-  width: 35%;
+  width: 300px;
   border: none;
   background-color: #eaeaea;
   padding: 0px;
@@ -579,19 +631,19 @@ header img {
   color: black;
 }
 .localisation ::-moz-placeholder {
-  font-family: Roboto;
+  font-family: "Roboto";
   font-size: 35px;
   font-style: 500;
   color: black;
 }
 .localisation :-ms-input-placeholder {
-  font-family: Roboto;
+  font-family: "Roboto";
   font-size: 35px;
   font-style: 500;
   color: black;
 }
 .localisation ::placeholder {
-  font-family: Roboto;
+  font-family: "Roboto";
   font-size: 35px;
   font-style: 500;
   color: black;
@@ -616,9 +668,10 @@ header img {
   text-align: center;
 }
 .slogan button {
-  height: 120px;
+  height: 130px;
   width: 50%;
   margin: 60px 25% 120px 25%;
+  padding: auto;
   border-radius: 60px;
   border: none;
   color: #FFF;
@@ -687,6 +740,12 @@ header img {
   flex-direction: column;
   height: 3105px;
   justify-content: space-between;
+}
+.restaurants .allcards {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }
 .restaurants .cardAndIcons {
   position: relative;
@@ -812,7 +871,11 @@ footer .infofooter p, footer .infofooter a {
   font-size: 45px;
   font-weight: 400;
   margin-bottom: 0px;
+  margin-top: 45px;
   color: #FFF;
+}
+footer .infofooter .contact {
+  margin-top: 45px;
 }
 
 @-webkit-keyframes heartAnimation {
@@ -1000,5 +1063,173 @@ footer .infofooter p, footer .infofooter a {
   }
   to {
     color: #000;
+  }
+}
+@media only screen and (min-width: 900px) {
+  body {
+    background-color: red;
+  }
+  .loadingPage {
+    height: 2509px;
+  }
+  header .title {
+    justify-content: flex-start;
+  }
+  header .title img {
+    margin-left: 6%;
+    width: 200px;
+    height: 50px;
+  }
+  .localisation {
+    width: 380px;
+    height: 60px;
+    justify-content: flex-start;
+    margin-left: 6%;
+    margin-top: 50px;
+    background-color: #FFF;
+    border: solid 3px #F6F6F6;
+    border-left: none;
+    border-radius: 20px 20px 20px 20px;
+  }
+  .localisation span {
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    height: 62px;
+    padding-left: 5px;
+    background-color: #F6F6F6;
+    color: #000000;
+    border-radius: 20px 0px 0px 20px;
+  }
+  .localisation span i {
+    font-size: 30px;
+  }
+  .localisation input {
+    width: 75%;
+    padding-left: 6%;
+    background-color: #FFFFFF;
+    font-size: 20px;
+  }
+  .localisation ::-moz-placeholder {
+    font-size: 26px;
+  }
+  .localisation :-ms-input-placeholder {
+    font-size: 26px;
+  }
+  .localisation ::placeholder {
+    font-size: 26px;
+  }
+  .slogan {
+    margin-top: 70px;
+    background-color: #FFFFFF;
+    margin-left: 6%;
+  }
+  .slogan h1 {
+    margin: 0;
+    padding-top: 0;
+    font-size: 40px;
+    text-align: left;
+  }
+  .slogan h2 {
+    margin: 20px 0 0 0;
+    font-size: 25px;
+    text-align: left;
+  }
+  .slogan button {
+    margin-bottom: 60px;
+    height: 90px;
+    font-size: 25px;
+    font-family: "Roboto";
+  }
+  .fonctionnement {
+    margin: 0 6% 0 6%;
+  }
+  .fonctionnement .allcardsfonctionnement {
+    display: flex;
+    justify-content: space-between;
+  }
+  .fonctionnement h1 {
+    font-size: 40px;
+    margin: 0;
+    margin-bottom: 30px;
+  }
+  .fonctionnement .rondvioletnombre {
+    display: none;
+  }
+  .fonctionnement .cartefonctionnement {
+    flex-direction: column;
+    height: 250px;
+    width: 30%;
+    box-shadow: #f6f6f6 5px 5px 5px;
+    background-color: #FFFFFF;
+    margin-bottom: 0;
+  }
+  .fonctionnement .cartefonctionnement .icone {
+    width: 100%;
+    height: 35%;
+    background-color: #F6F6F6;
+    border-radius: 40px 40px 0px 0px;
+  }
+  .fonctionnement .cartefonctionnement p {
+    text-align: center;
+    font-size: 30px;
+  }
+  .restaurants {
+    height: 1020px;
+    padding: 0;
+    background-color: #FFFFFF;
+    justify-content: space-between;
+  }
+  .restaurants h1 {
+    margin: 50px 6%;
+    font-size: 40px;
+  }
+  .restaurants .allcards {
+    flex-direction: row;
+    margin: 0 6%;
+    flex-wrap: wrap;
+  }
+  .restaurants .cardAndIcons {
+    width: 47%;
+    height: 375px;
+    box-shadow: #F6F6F6 5px 5px 5px;
+    border-radius: 40px;
+  }
+  .restaurants .cardAndIcons .nouveaucarte {
+    top: 15px;
+    left: 72%;
+    height: 45px;
+    width: 90px;
+    font-size: 20px;
+    border-radius: 15px;
+  }
+  .restaurants .iconacceuil {
+    top: 290px;
+  }
+  .restaurants .iconacceuil .fa-heart {
+    font-size: 50px;
+  }
+  .carteacceuil {
+    width: 45%;
+  }
+  .carteacceuil .photocarteacceuil {
+    height: 65%;
+  }
+  .carteacceuil .basdecarte {
+    height: 35%;
+  }
+  .carteacceuil .basdecarte .infocarteacceuil {
+    height: 100px;
+    width: 100%;
+  }
+  .carteacceuil .basdecarte .infocarteacceuil h2 {
+    height: 50%;
+    font-size: 30px;
+    margin: 0;
+  }
+  .carteacceuil .basdecarte .infocarteacceuil h3 {
+    height: 50%;
+    font-size: 25px;
+    margin: 0;
   }
 }/*# sourceMappingURL=index.css.map */
