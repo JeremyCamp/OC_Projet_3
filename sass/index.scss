@@ -10,8 +10,7 @@ $couleurPastillesEtIconesCartesFonctionnement: #9356DC;
 
 
 * {
-    margin-left: 0px;
-    margin-right: 0px;
+    margin: 0px;
 }
 
 a {
@@ -21,6 +20,7 @@ a {
 
 body {
     margin: 0;
+    position: relative;
 }
 
 img {
@@ -29,38 +29,24 @@ img {
 }
 
 .loadingPage {
+    display: flex;
+    justify-content: center;
     position: absolute;
-    height: 6270px;
     width: 100%;
+    height: 100%;
     animation-name: loadingPage;
-    animation-duration: 3000ms;
+    animation-duration: 3200ms;
     animation-fill-mode: both;
 }
 
-
-.loader {
-    height: 30px;
-    width: 30px;
-    border-top: solid 60px #9356DC;
-    border-bottom: solid 60px #9356DC;
-    border-left: solid 60px #FF79DA;
-    border-right: solid 60px #FF79DA;
-    border-radius: 50%;
-    position: fixed;
-    animation-name: loader;
-    animation-duration:3000ms;
-    opacity: 1;
-}
-
 .loadertext {
-    margin-left: 130px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 73%;
-    height: 60px;
-    margin-top: 65%;
     position: fixed;
+    padding-top: 75%;
+    width: 80%;
+    height: 60px;
     :nth-child(1) {
         animation-name: letterAnimation;
         animation-duration: 3000ms;
@@ -116,14 +102,11 @@ img {
     justify-content: center;
     width: 5%;
     font-family: Shrikhand;
-    font-size: 80px;
+    font-size: 30px;
 }
 
 header {
-    width: 100%;
-    height: 90px;
-    margin: 40px 0px 10px 0px;
-
+    margin: 15px 0;
     .title{
         height: 100%;
         display: flex;
@@ -132,8 +115,8 @@ header {
     }
 
     img {
-        width: 43%;
-        height: 70%;
+        width: 170px;
+        height: 30px;
     }
 }
 
@@ -142,19 +125,18 @@ header {
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 120px;
+    height: 60px;
     background-color: #eaeaea;
-
 
     span{
         height: 100%;
-        width: 90px;
         display: flex;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
+        margin-right: 2%;
 
         i {
-            font-size: 35px;
+            font-size: 20px;
             margin-bottom: 10px;
         }
     }
@@ -163,91 +145,84 @@ header {
         display: flex;
         align-items: center;
         height: 40px;
-        width: 300px;
         border: none;
         background-color: #eaeaea;
         padding: 0px;
         outline: none;
         font-family: Roboto;
-        font-size: 35px;
-        font-style: 500;
         color: black;
     }
 
     ::placeholder {
         font-family: 'Roboto';
-        font-size: 35px;
-        font-style: 500;
+        font-size: 16px;
         color: black;
     }
 }
 
 .slogan {
     background-color: $couleurGriseCarteEtBackground;
+    text-align: center;
 
     h1 {
         font-family: Roboto;
         font-weight: 400;
-        font-size: 55px;
+        font-size: 25px;
         margin: 0 18% 0 18%;
-        padding-top: 100px;
-        text-align: center;
+        padding-top: 30px;
     }
 
     h2 {
         font-family: Roboto;
-        font-size: 45px;
+        font-size: 18px;
         font-weight: 100;
-        margin: 20px 10% 0 10%;
-        text-align: center;
+        margin: 15px 6% 0 6%;
     }
 
     button {
-        height: 130px;
-        width: 50%;
-        margin: 60px 25% 120px 25%;
-        padding: auto;
-        border-radius: 60px;
+        height: 50px;
+        width: 225px;
+        margin: 20px auto 50px auto;
+        border-radius: 40px;
         border: none;
         color: #FFF;
-        font-size: 36px;
+        font-size: 18px;
         background: linear-gradient(#FF79DA, #9356DC);
     }
 }
 
 .fonctionnement {
-    margin: 100px 6% 180px 6%;
+    margin: 50px 6% 50px 6%;
     h1{
-        font-family: Roboto;
+        font-family: 'Roboto';
         font-weight: 400;
-        font-size: 55px;
+        font-size: 26px;
     }
 }
 
 .rondvioletnombre {
     position: relative;
-    top: 130px;
-    right: 20px;
+    top: 52px;
+    right: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 70px;
-    width: 70px;
+    height: 25px;
+    width: 25px;
     border-radius: 50%;
     color: #FFF;
-    font-size: 30px;
-    font-family: roboto;
+    font-size: 15px;
+    font-family: 'roboto';
     background-color: $couleurPastillesEtIconesCartesFonctionnement;
 }
 
 .cartefonctionnement {
     display: flex;
     align-items: center;
-    width: 100%;
-    height: 190px;
+    justify-content: center;
+    height: 80px;
     background-color: $couleurGriseCarteEtBackground;
-    margin-bottom: 50px;
-    border-radius: 50px;
+    border-radius: 25px;
     &:hover {
         background-color: #f5edff;
         .icone {
@@ -257,15 +232,16 @@ header {
 
     .icone {
         display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 25%;
         font-size: 300%;
+        margin-right: 10%;
+        .fa-solid {
+            font-size: 20px;
+            margin-right: 5%;
+        }
     }
     
     p{
-        width: 75%;
-        font-size: 45px;
+        font-size: 18px;
         font-weight: 400;
         font-family: Roboto;
     }
@@ -273,10 +249,10 @@ header {
 
 .restaurants {
     background-color: $couleurGriseCarteEtBackground;
-    padding: 180px 6% 200px 6%;
+    padding: 50px 6% 50px 6%;
     display: flex;
     flex-direction: column;
-    height: 3105px;
+    height: 1080px;
     justify-content: space-between;
 
     .allcards {
@@ -291,16 +267,18 @@ header {
         .nouveaucarte {
             display: flex;
             position: absolute;
-            left: 77%;
-            top: 25px;
+            left: 72%;
+            top: 15px;
             align-items: center;
             justify-content: center;
             background-color: #99e2d0;
             color: #008766;
-            height: 80px;
-            width: 170px;
-            border-radius: 10px;
-            font-size: 40px;
+            height: 30px;
+            width: 80px;
+            border-radius: 5px;
+            font-size: 14px;
+            font-family: 'Roboto';
+            box-sizing: border-box;
         }
     }
 
@@ -310,12 +288,12 @@ header {
         align-items: center;
         justify-content: flex-end;
         width: 25%;
-        left: 70%;
-        top: 530px;
+        left: 68%;
+        top: 190px;
         pointer-events: auto; 
 
         .fa-heart {
-            font-size: 70px;
+            font-size: 30px;
         }
 
         .colorheart {
@@ -334,21 +312,20 @@ header {
     }
 
     h1 {
-        font-family: Roboto;
-        font-size: 52px;
+        font-family: 'Roboto';
+        font-size: 26px;
         font-weight: 400;
-        margin-bottom: 50px;
+        margin-bottom: 30px;
     }
 }
 
 .carteacceuil {
-    height: 675px;
 
     .photocarteacceuil {
-        height: 475px;
+        height: 170px;
 
         img {
-        border-radius: 40px 40px 0 0;
+        border-radius: 20px 20px 0 0;
         object-fit: cover;
         }
     }
@@ -356,25 +333,22 @@ header {
     .basdecarte {
         display: flex;
         align-items: center;
-        height: 200px;
+        height: 70px;
         background-color: #FFF;
-        border-radius: 0px 0px 40px 40px;
+        border-radius: 0px 0px 20px 20px;
         padding: 0 8% 0 5%;
 
         h2{
-            font-family: roboto;
-            font-size: 44px;
+            font-family: 'roboto';
+            font-size: 18px;
             font-weight: 400;
-            margin-top: 30px;
-            margin-bottom: 0px;
+            margin-bottom: 5px;
         }
 
         h3 {
             font-family: roboto;
-            font-size: 42px;
+            font-size: 16px;
             font-weight: 200;
-            margin-top: 20px;
-            margin-bottom: 40px;
         }
 
         .infocarteacceuil {
@@ -386,13 +360,15 @@ header {
 footer {
     display: flex;
     align-items: center;
+    justify-content: flex-start;
     background-color: #353535;
     color: #FFF;
-    height: 650px;
+    height: 220px;
 
     img {
         filter: invert(100%);
-        width: 250px;
+        width: 110px;
+        margin-bottom: 20px;
     }
 
     .lienfooter {
@@ -401,32 +377,32 @@ footer {
 
         .fa-handshake-angle {
             margin-right: 10px;
-            margin-top: 50px;
-            font-size: 250%;
+            margin-top: 5px;
+            font-size: 15px;
         }
 
         .fa-utensils {
-            margin-right: 17px;
-            margin-top: 50px;
-            font-size: 250%;
+            margin-right: 15px;
+            margin-top: 5px;
+            font-size:17px;
         }
     }
 
     .infofooter{
-        margin: 0px 0px 50px 59px;
+        margin: 20px 0px 50px 30px;
 
 
         p, a {
             font-family: 'roboto',sans-serif;
-            font-size: 45px;
+            font-size: 16px;
             font-weight: 400;
             margin-bottom: 0px;
-            margin-top: 45px;
+            margin-top: 10px;
             color: #FFF;
         }
 
         .contact {
-            margin-top: 45px;
+            margin-top: 5px;
         }
     }
 }
@@ -460,60 +436,6 @@ footer {
     }
 }
 
-@keyframes loader {
-    from {
-        transform: translate(0px, 210px) rotate(360deg);
-    }
-    6% {
-        transform: translate(50px, 420px) rotate(0deg);
-    }
-    12% {
-        transform: translate(100px, 210px) rotate(360deg);
-    }
-    18% {
-        transform: translate(150px, 420px) rotate(0deg);
-    }
-    24% {
-        transform: translate(200px, 210px) rotate(360deg);
-    }
-    30% {
-        transform: translate(250px, 420px) rotate(0deg);
-    }
-    36% {
-        transform: translate(300px, 210px) rotate(360deg);
-    }
-    42% {
-        transform: translate(350px, 420px)rotate(0deg);
-    }
-    48% {
-        transform: translate(400px, 210px) rotate(360deg);
-    }
-    54% {
-        transform: translate(450px, 420px) rotate(0deg);
-    }
-    60% {
-        transform: translate(500px, 210px) rotate(360deg);
-    }
-    66% {
-        transform: translate(550px, 420px) rotate(0deg);
-    }
-    72% {
-        transform: translate(600px, 210px) rotate(360deg);
-    }
-    78% {
-        transform: translate(650px, 420px) rotate(0deg);
-    }
-    84% {
-        transform: translate(700px, 210px) rotate(360deg);
-    }
-    90% {
-        transform: translate(750px, 420px) rotate(0deg);
-    }
-    to {
-        transform: translate(800px, 210px) rotate(360deg);
-    }
-}
-
 @keyframes letterAnimation {
     from {
         color: #FF79DA;
@@ -529,174 +451,190 @@ footer {
     }
 }
 
-
-@media only screen and (min-width: 900px) {
-
-    body {
-        background-color: red;
-    }
-    .loadingPage {
-        height: 2509px;
-    }
-    header .title {
-        justify-content: flex-start;
-        img {
-            margin-left: 6%;
-            width: 200px;
-            height: 50px;
-        }
-    }
-
-    .localisation {
-        width: 380px;
-        height: 60px;
-        justify-content: flex-start;
-        margin-left: 6%;
-        margin-top: 50px;
-        background-color: #FFF;
-        border: solid 3px #F6F6F6;
-        border-left: none;
-        border-radius: 20px 20px 20px 20px;
-        span {
-            justify-content: center;
-            align-items: center;
-            width: 15%;
-            height: 62px;
-            padding-left: 5px;
-            background-color: #F6F6F6;
-            color: #000000;
-            border-radius: 20px 0px 0px 20px;
-            i {
-                font-size: 30px;
+@media screen and (min-width: 400px) and (max-width: 499px) {
+    .restaurants {
+        .cardAndIcons {
+            .nouveaucarte {
+                left: 73%;
             }
         }
-        input {
-            width: 75%;
-            padding-left: 6%;
-            background-color: #FFFFFF;
-            font-size: 20px;
-        }
-        ::placeholder {
-            font-size: 26px;
-        }
-        
     }
+}
 
-    .slogan {
-        margin-top: 70px;
-        background-color: #FFFFFF;
-        margin-left: 6%;
-        h1 {
-            margin: 0;
-            padding-top: 0;
-            font-size: 40px;
-            text-align: left;
-        }
-        h2 {
-            margin: 20px 0 0 0;
-            font-size: 25px;
-            text-align: left;
-        }
-        button {
-            margin-bottom: 60px;
-            height: 90px;
-            font-size: 25px;
-            font-family: 'Roboto';
+@media screen and (min-width: 480px) and (max-width: 529px) {
+    .restaurants {
+        .cardAndIcons {
+            .nouveaucarte {
+                left: 76%;
+            }
         }
     }
+}
 
+@media screen and (min-width: 530px) and (max-width: 579px) {
+    .restaurants {
+        .cardAndIcons {
+            .nouveaucarte {
+                left: 79%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 580px) and (max-width: 694px) {
+    .restaurants {
+        .cardAndIcons {
+            .nouveaucarte {
+                left: 81%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 695px) and (max-width: 729px) {
+    .restaurants {
+        .cardAndIcons {
+            .nouveaucarte {
+                left: 83%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 730px) and (max-width: 767px) {
+    .restaurants {
+        .cardAndIcons {
+            .nouveaucarte {
+                left: 85%;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
+    .loadertext {
+        padding-top: 40%;
+    }
+
+    .fonctionnement, .restaurants {
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+
+    .restaurants {
+        border-radius: 20px;
+        margin-bottom: 50px;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 839px) {
+    .restaurants {
+        .cardAndIcons {
+            .nouveaucarte {
+                left: 75%;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 840px) and (max-width: 991px) {
+    .restaurants {
+        .cardAndIcons {
+            .nouveaucarte {
+                left: 77%;
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 992px) {
+    .loadertext {
+        padding-top: 25%;
+    }
     .fonctionnement {
-        margin: 0 6% 0 6%;
+        margin: 50px 10%;
         .allcardsfonctionnement {
             display: flex;
-            justify-content: space-between;
-        }
-        h1{
-            font-size: 40px;
-            margin: 0;
-            margin-bottom: 30px;
-        }
-        .rondvioletnombre {
-            display: none;
-        }
-        .cartefonctionnement {
-            flex-direction: column;
-            height: 250px;
-            width: 30%;
-            box-shadow: #f6f6f6 5px 5px 5px;
-            background-color: #FFFFFF;
-            margin-bottom: 0;
-            .icone {
-                width: 100%;
-                height: 35%;
-                background-color: #F6F6F6;
-                border-radius: 40px 40px 0px 0px;
-            }
-            p {
-                text-align: center;
-                font-size: 30px;
+            flex-direction: row;
+            .cartefonctionnement {
+                width: 30%;
             }
         }
     }
-    
-    .restaurants {
-        height: 1020px;
-        padding: 0;
-        background-color: #FFFFFF;
-        justify-content: space-between;
-        h1{
-            margin: 50px 6%;
-            font-size: 40px;
-        }
 
+    .rondvioletnombre {
+        top: 30px;
+        left: 12px;
+    }
+
+    .restaurants {
+        height: 590px;
+        margin-left: 10%;
+        margin-right: 10%;
+        border-radius: 20px;
         .allcards {
             flex-direction: row;
-            margin: 0 6%;
             flex-wrap: wrap;
-        }
-        .cardAndIcons {
-            width: 47%;
-            height: 375px;
-            box-shadow: #F6F6F6 5px 5px 5px;
-            border-radius: 40px;
-            .nouveaucarte {
-                top: 15px;
-                left: 72%;
-                height: 45px;
-                width: 90px;
-                font-size: 20px;
-                border-radius: 15px;
+            
+            .cardAndIcons {
+                width: 48%;
             }
         }
-        .iconacceuil {
-            top: 290px;
-            .fa-heart {
-                font-size: 50px;
-            }
-        }
-    
     }
-
-    .carteacceuil {
-        width: 45%;
-        .photocarteacceuil {
-            height: 65%;
+    footer {
+        padding-left: 40%;
+        .infofooter {
+            margin-left: 0;
         }
-        .basdecarte {
-            height: 35%;
-            .infocarteacceuil {
-                height: 100px;
-                width: 100%;
-                h2 {
-                    height: 50%;
-                    font-size: 30px;
-                    margin: 0;
-                }
-                h3 {
-                    height: 50%;
-                    font-size: 25px;
-                    margin: 0;
-                }
+        img {
+            width: 170px;
+            margin-bottom: 10px;
+        }
+        .infofooter {
+            p, a {
+                font-size: 22px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1090px) {
+    .restaurants {
+        .cardAndIcons {
+            .nouveaucarte {
+                left: 73%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1091px) and (max-width: 1200px) {
+    .restaurants {
+        .cardAndIcons {
+            .nouveaucarte {
+                left: 75%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1399px) {
+    .restaurants {
+        .cardAndIcons {
+            .nouveaucarte {
+                left: 78%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .restaurants {
+        .cardAndIcons {
+            .nouveaucarte {
+                left: 80%;
             }
         }
     }
