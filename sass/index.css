@@ -348,6 +348,9 @@ footer .infofooter p, footer .infofooter a {
 footer .infofooter .contact {
   margin-top: 5px;
 }
+footer .infofooter img {
+  margin-top: 30px;
+}
 
 @-webkit-keyframes delayCard {
   from {
@@ -391,6 +394,9 @@ footer .infofooter .contact {
   }
 }
 @media screen and (min-width: 768px) {
+  header .logo .icontitle {
+    left: 6%;
+  }
   header .logo .icontitle .fa-arrow-left-long {
     font-size: 50px;
   }
@@ -433,6 +439,9 @@ footer .infofooter .contact {
   }
 }
 @media screen and (min-width: 992px) {
+  header .logo .icontitle {
+    left: 16%;
+  }
   .imageAndBorderRadiusRestaurant {
     margin-left: 16%;
     margin-right: 16%;
@@ -509,11 +518,16 @@ img {
 }
 
 .loadingPage {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 666;
   display: flex;
   justify-content: center;
-  position: absolute;
+  align-items: center;
   width: 100%;
   height: 100%;
+  background-color: #FFFFFF;
   -webkit-animation-name: loadingPage;
           animation-name: loadingPage;
   -webkit-animation-duration: 3200ms;
@@ -527,7 +541,6 @@ img {
   align-items: center;
   justify-content: space-between;
   position: fixed;
-  padding-top: 75%;
   width: 80%;
   height: 60px;
 }
@@ -928,34 +941,18 @@ footer .infofooter .contact {
 }
 @-webkit-keyframes loadingPage {
   from {
-    background-color: #FFF;
-    opacity: 1;
-    z-index: 1;
-  }
-  99% {
-    background-color: #FFF;
-    opacity: 1;
-    z-index: 1;
+    visibility: visible;
   }
   to {
-    opacity: 0;
-    z-index: -99;
+    visibility: hidden;
   }
 }
 @keyframes loadingPage {
   from {
-    background-color: #FFF;
-    opacity: 1;
-    z-index: 1;
-  }
-  99% {
-    background-color: #FFF;
-    opacity: 1;
-    z-index: 1;
+    visibility: visible;
   }
   to {
-    opacity: 0;
-    z-index: -99;
+    visibility: hidden;
   }
 }
 @-webkit-keyframes letterAnimation {
@@ -1017,9 +1014,6 @@ footer .infofooter .contact {
   }
 }
 @media only screen and (min-width: 768px) {
-  .loadertext {
-    padding-top: 40%;
-  }
   .fonctionnement, .restaurants {
     margin-left: 20%;
     margin-right: 20%;
@@ -1040,11 +1034,12 @@ footer .infofooter .contact {
   }
 }
 @media screen and (min-width: 992px) {
-  .loadertext {
-    padding-top: 25%;
-  }
   .fonctionnement {
     margin: 50px 10%;
+  }
+  .fonctionnement h1 {
+    margin-top: 30px;
+    margin-bottom: 30px;
   }
   .fonctionnement .allcardsfonctionnement {
     display: flex;
