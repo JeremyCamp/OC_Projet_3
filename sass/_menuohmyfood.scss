@@ -443,7 +443,6 @@ footer {
     .menurestaurant {
         margin-left: 10%;
         margin-right: 10%;
-
         h2 {
             font-size: 30px;
         }
@@ -461,6 +460,9 @@ footer {
         .cartesmenus {
             height: 120px;
             margin-top: 30px;
+            &:hover {
+                cursor: pointer;
+            }
             .infomenu {
                 h3 {
                     font-size: 35px;

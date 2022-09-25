@@ -473,6 +473,9 @@ footer .infofooter img {
     height: 120px;
     margin-top: 30px;
   }
+  .menurestaurant .cartesmenus:hover {
+    cursor: pointer;
+  }
   .menurestaurant .cartesmenus .infomenu h3 {
     font-size: 35px;
   }
