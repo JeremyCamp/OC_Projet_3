@@ -201,19 +201,19 @@ header {
     border-radius: 15px;
     padding-left: 4%;
     margin-top: 15px;
-    &:active .validation {
+    &:active .validation, &:hover .validation {
         width: 21%;
         height: 100%;
         opacity: 1;
         transition: ease;
         transition-duration: 1000ms;
     }
-    &:active .bgcheck{
+    &:active .bgcheck, {
         transform: rotate(360deg);
         transition-duration: 1000ms;
         opacity: 1;
         }
-    &:active .infomenu {
+    &:active .infomenu,{
         h3 {
             text-overflow: ellipsis;
             overflow: hidden;
